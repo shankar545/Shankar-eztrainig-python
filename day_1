@@ -1,132 +1,70 @@
-lst = [24, 87.54, '2', "surya", """sanjay""", [1,2,3], False, (1,2,3), {23,45,37}, 10j]
-for i in lst:
-    print(i, type(i))
-24 <class 'int'>
-87.54 <class 'float'>
-2 <class 'str'>
-surya <class 'str'>
-sanjay <class 'str'>
-[1, 2, 3] <class 'list'>
-False <class 'bool'>
-(1, 2, 3) <class 'tuple'>
-{45, 37, 23} <class 'set'>
-10j <class 'complex'>
- 
-a = 1
-b = 11
-a is b
-False
-b =1
-a is b
-True
- 
-id(a)
-1786272114992
-id(b)
-1786272114992
-l = [1,2,3]
-l[0] is a
-True
-id(l[0])
-1786272114992
-id(1)
-1786272114992
-id(2)
-1786272115024
-id(l)
-1786383881472
-lr=[1,2,3]
-id(lr)
-1786383609664
-l is lr 
-False
-l is [1,2,3] 
-False
-#append accept only one arugument
-#len ,pop ,extend function to add
-#sorted
-del l[0]
-l
-[2, 3]
-l.clear()
-l.
-[]
-l=[1,2,3]
-l+=lr
-l
-[1, 2, 3, 1, 2, 3]
-del l
-l=[25,45,12,10,16]
-l
-[25, 45, 12, 10, 16]
-ord("A") == 65
-True
-"A" == 65
-False
-'A' == 65
-False
- 
- 
-a = list('12345')
-a
-['1', '2', '3', '4', '5']
- 
-a.map(lambda x: int(x))
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-Input In [103], in <cell line: 1>()
-----> 1 a.map(lambda x: int(x))
+my_num=input("enter a number")
+if(type(my_num)==int):
+    print("integer")
+else:
+    print("float")
+    
+#2
+N1=int(input("ENTER THE WEIGHT OF CANDY KUMAR BOUGHT"))
+SAM=N1/2
+N2=N1-SAM
+N3=SAM/2
+print("the amount of candy kumar having is:",N2+N3)
+print("the amount sam is having is:",N3)
 
-AttributeError: 'list' object has no attribute 'map'
-b=list(map(int,a))
-b
-[1, 2, 3, 4, 5]
-int('a')
----------------------------------------------------------------------------
-ValueError                                Traceback (most recent call last)
-Input In [106], in <cell line: 1>()
-----> 1 int('a')
 
-ValueError: invalid literal for int() with base 10: 'a'
-import numpy as np
-arr = np.array(a)
-arr
-array(['1', '2', '3', '4', '5'], dtype='<U1')
-arr.map(lambda x: int(x))
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-Input In [110], in <cell line: 1>()
-----> 1 arr.map(lambda x: int(x))
+#3
+=[1,2,1,1,6,4,1,2]
+print(len(l))
+print(l.count(1))
+print(l.append(400))
+print(l.extend([100,200,300]))
+print(l.remove(1))
+print(l.pop(-2))
+print(l.pop(9))
 
-AttributeError: 'numpy.ndarray' object has no attribute 'map'
-import pandas as pd
-b=pd.Series(a)
-b
-0    1
-1    2
-2    3
-3    4
-4    5
-dtype: object
-c=b.map(lambda x: int(x))
-c
-0    1
-1    2
-2    3
-3    4
-4    5
-dtype: int64
- 
- 
-a=list(input("enter numbers:"))
-a
-enter numbers:12345
-['1', '2', '3', '4', '5']
-b=list(map(int,a))
-b
-[1, 2, 3, 4, 5]
-a = list(map(int, input().split(' ')))
-a
-1 2 3
-[1, 2, 3]
- 
+
+#loop functions
+l=[1,2,3,4,5]
+for i in range(len(l)):
+     print(l[i])
+for j in l:
+     print(j)
+
+#user input
+
+list=map(int,input("enter the elements").split())
+for i in list:
+    if i%2==0:
+      print(i)
+
+#4
+L=[1,4,7.4,"SAM"]
+print(L)
+print(L[3])
+print(L[2:3])
+print(L[2:4])
+print(L[0:])
+print(L[:3])
+print(L[-1])
+print(L[::-1])
+print(type(L))
+
+#5
+i=1
+while(i<=20):
+    if(i%2==0):
+        print(i)
+    i+=1
+    
+#6
+n1=input("enter a number")
+print(isinstance(n1,int))
+
+#7
+n1=int(input("enter a number"))
+if n1==500:
+    print('yes')
+else:
+    print('no')
+    
