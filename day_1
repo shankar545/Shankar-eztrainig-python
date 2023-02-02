@@ -1,101 +1,132 @@
-L= [1,4,7.4,"sam"]
+lst = [24, 87.54, '2', "surya", """sanjay""", [1,2,3], False, (1,2,3), {23,45,37}, 10j]
+for i in lst:
+    print(i, type(i))
+24 <class 'int'>
+87.54 <class 'float'>
+2 <class 'str'>
+surya <class 'str'>
+sanjay <class 'str'>
+[1, 2, 3] <class 'list'>
+False <class 'bool'>
+(1, 2, 3) <class 'tuple'>
+{45, 37, 23} <class 'set'>
+10j <class 'complex'>
+ 
+a = 1
+b = 11
+a is b
+False
+b =1
+a is b
+True
+ 
+id(a)
+1786272114992
+id(b)
+1786272114992
+l = [1,2,3]
+l[0] is a
+True
+id(l[0])
+1786272114992
+id(1)
+1786272114992
+id(2)
+1786272115024
+id(l)
+1786383881472
+lr=[1,2,3]
+id(lr)
+1786383609664
+l is lr 
+False
+l is [1,2,3] 
+False
+#append accept only one arugument
+#len ,pop ,extend function to add
+#sorted
+del l[0]
+l
+[2, 3]
+l.clear()
+l.
+[]
+l=[1,2,3]
+l+=lr
+l
+[1, 2, 3, 1, 2, 3]
+del l
+l=[25,45,12,10,16]
+l
+[25, 45, 12, 10, 16]
+ord("A") == 65
+True
+"A" == 65
+False
+'A' == 65
+False
+ 
+ 
+a = list('12345')
+a
+['1', '2', '3', '4', '5']
+ 
+a.map(lambda x: int(x))
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Input In [103], in <cell line: 1>()
+----> 1 a.map(lambda x: int(x))
 
-print(L)
-print(L[3])
-print(L[2:3])
-print(L[2:3])
-print(L[0:])
-print(L[:3])
-print(L[-1])
-print(L[::-1])
+AttributeError: 'list' object has no attribute 'map'
+b=list(map(int,a))
+b
+[1, 2, 3, 4, 5]
+int('a')
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+Input In [106], in <cell line: 1>()
+----> 1 int('a')
 
-print(L)
-L.append(4)
-print(L)
-L.extend([5,6])
-print(L)
-L.insert(1,22)
-print(L)
-L.remove(22)
-print(L)
-L.pop(3)
-print(L)
-L.clear()
-print(L)
-L= [1,4,7.4,1,1]
-print(L)
-L.index(7.4)
-print(L)
-L.count(1)
-print(L)
-L.sort()
-print(L)
-L.reverse()
-print(L)
+ValueError: invalid literal for int() with base 10: 'a'
+import numpy as np
+arr = np.array(a)
+arr
+array(['1', '2', '3', '4', '5'], dtype='<U1')
+arr.map(lambda x: int(x))
+---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+Input In [110], in <cell line: 1>()
+----> 1 arr.map(lambda x: int(x))
 
-
-
-l = [1,2,3,2]
-
-for i in range(len(l)):
-    print(l[i])
-
-for i in l :
-    print(i)
-
-
-for i in l :
-    if (i%2==0):
-        print(i)
-
-l = int(input("enter your bloddy number:"))
-
-def neonnum(l):
-    numstr = str(l*l)
-    sum =0
-    for i in numstr:
-        sum=sum+int(i)
-    if(sum==l):
-        print("it is neon")
-    else:
-        print("no its not")
-        
-neonnum(l)
-
-# returning based on some condition
-
-import math
-list = list(map(int,input("enter value to be appended :").split()))
-product= math.prod(list)
-print(product if product<750 else sum(list))
-
-
-numbers = [e for e in "Every day Eagle" if ord(e)>=65 and ord(e)<=90]
-print(numbers)
-
-set1 = {1,2,3,4,5,}
-set2 = {6,7,8,1,2}
-set1.add(10)
-set1.discard(10)
-print(set1 | set2)
-print(set1 ^ set2)
-print(set1 - set2)
-print(set1.issuperset(set2))
-print(set1.symmetric_difference(set2))
-
-
-dictionary = {1:"one",2:"two","3" : [2,3]}
-print(type(dictionary))
-print(dictionary.keys())
-print(dictionary.values())
-print(dictionary.items())
-
-list = [1,2,3]
-dictionary = dict()
-
-for i in list:
-     key = i
-     value =int( input("inpurt evvara:"))
-     dictionary.fromkeys(i,value)
-
-print(dictionary)
+AttributeError: 'numpy.ndarray' object has no attribute 'map'
+import pandas as pd
+b=pd.Series(a)
+b
+0    1
+1    2
+2    3
+3    4
+4    5
+dtype: object
+c=b.map(lambda x: int(x))
+c
+0    1
+1    2
+2    3
+3    4
+4    5
+dtype: int64
+ 
+ 
+a=list(input("enter numbers:"))
+a
+enter numbers:12345
+['1', '2', '3', '4', '5']
+b=list(map(int,a))
+b
+[1, 2, 3, 4, 5]
+a = list(map(int, input().split(' ')))
+a
+1 2 3
+[1, 2, 3]
+ 
